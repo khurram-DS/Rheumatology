@@ -1604,7 +1604,7 @@ You may want to see an orthopedist if you need a joint replacement or have:
             bio_mono_type2=bio_mono_type2.sort_values('Counts',ascending = False)
             st.write(bio_mono_type2.reset_index(drop=True))
             st.markdown("**cross table**")
-            biom2 = pd.pivot_table(bio_mono_type2, index=['BioMono2'], columns=["Type"], values=['Counts','Percentage'],aggfunc='sum',margins = True, margins_name='Total')
+            biom2 = pd.pivot_table(bio_mono_type2, index=['BioMono2'], columns=["Type"], values=['Counts','Percentage'])
             st.write(biom2)
             
             st.markdown("- The above table showing counts and percentage of BIOMONO2 types with cross table")
